@@ -1,0 +1,28 @@
+{
+  "name": "react-app",
+  "version": "1.0.0",
+  "description": "React vite with zustand",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack serve",
+    "build": "webpack --config webpack.prod.js",
+    "prettier": "prettier --check src/**/*.ts",
+    "prettier:fix": "prettier --write src/**/*.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gaboxlive/react-app.git"
+  },
+  "keywords": [],
+  "author": "Gabriel Angel Cruz Garcia",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/gaboxlive/react-app/issues"
+  },
+  "homepage": "https://github.com/gaboxlive/react-app#readme",
+  "dependencies": {
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0"
+  }
+}
