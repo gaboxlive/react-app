@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import pokeball from '../../assets/pokeball.png';
+import { SearchButton } from '../shared/button/SearchButton';
 
 const NavigationBar: React.FC = () => (
     <nav className='w-full bg-yellow-400 flex justify-between h-12 items-center shadow-lg'>
@@ -15,6 +16,7 @@ const NavigationBar: React.FC = () => (
                 <Link to={'/favorite'} className='text-black hover:text-white'>
                     Favoritos
                 </Link>
+                <SearchButton />
             </div>
         </div>
     </nav>
