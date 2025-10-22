@@ -1,6 +1,6 @@
 import React from 'react';
 import Providers from './Providers';
-import AppRoutes from './routes/indext';
+import {AppRoutes} from './routes/indext';
 import './App.css';
 import NavigationBar from './components/nav/NavigationBar';
 import { SearchModal } from './components/searchModal/SearchModal';

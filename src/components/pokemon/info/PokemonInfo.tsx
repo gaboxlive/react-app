@@ -1,6 +1,6 @@
 import React, { useMemo } from 'react';
 import { useGetPokemon } from '../../../hooks/usetGetPokemon';
-import { useParams } from 'react-router';
+import { useParams } from 'react-router-dom';
 import { getMainPokemonType } from '../../../utils/getMainPokemonType';
 import { capitalize } from '../../../utils/capitalize';
 import { convertInchesToCm, convertLbsToKg } from '../../../utils/convertion';

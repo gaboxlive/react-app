@@ -3,7 +3,7 @@ import { useGetPokemonList } from '../../../hooks/useGetPokemonList';
 import { PokemonCard } from '../card/PokemonCard';
 import { Grid } from '../../shared/grid/Grid';
 
-const PokemonList: React.FC = () => {
+export const PokemonList: React.FC = () => {
     const {pokemonList, goToNextPage, goToPreviousPage} = useGetPokemonList();
     return (
         <Grid goToNext={goToNextPage} goToPrev={goToPreviousPage}>
@@ -15,5 +15,3 @@ const PokemonList: React.FC = () => {
         </Grid>
     )
 }
-
-export default PokemonList;
