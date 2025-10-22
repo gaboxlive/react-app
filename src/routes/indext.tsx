@@ -6,7 +6,7 @@ const PokemonProfile = React.lazy(() => import('../views/PokemonProfile'));
 const PokemonByType = React.lazy(() => import('../views/PokemonType'));
 const FavoritePokemon = React.lazy(() => import('../views/FavoritePokemon'));
 
-const AppRoutes = () => (
+export const AppRoutes = () => (
     <Routes>
         <Route path="/" element={
             <React.Suspense fallback={<div>Loading...</div>}>
@@ -34,5 +34,3 @@ const AppRoutes = () => (
         </Route>
     </Routes>
 );
-
-export default AppRoutes;

@@ -1,6 +1,6 @@
 import React from 'react';
-import PokemonList from '../components/pokemon/list/PokemonList';
+import {PokemonList} from '../components/pokemon/list/PokemonList';
 
-const Pokedex: React.FC = () => <PokemonList />
+const Pokedex = () => <PokemonList />
 
 export default Pokedex;

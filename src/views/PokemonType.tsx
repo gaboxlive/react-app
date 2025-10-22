@@ -1,6 +1,6 @@
 import React from 'react';
-import { PokemonTypeList } from '../components/pokemon/list/PokemonListByType';
+import {PokemonTypeList} from '../components/pokemon/list/PokemonListByType';
 
-const PokemonByType: React.FC = () => <PokemonTypeList />
+const PokemonByType = () => <PokemonTypeList />
 
 export default PokemonByType;

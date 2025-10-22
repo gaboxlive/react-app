@@ -7,6 +7,7 @@ import { capitalize } from "../../../utils/capitalize";
 import { FavoriteButton } from "../../shared/button/favButton";
 import { useNavigate } from "react-router";
 import { TypeIcons } from "../../shared/typeIcons/TypeIcons";
+import { useSearchStore } from "../../../store/useSearchStore";
 
 interface PokemonCardProps {
     pokemon?: IPokemon;
@@ -14,16 +15,18 @@ interface PokemonCardProps {
 }
 
 export const PokemonCard: React.FC<PokemonCardProps> = ({ pokemon, pokemonId }) => {
+    const closeModal = useSearchStore((state) => state.closeModal);
     const { data } = useGetPokemon(pokemon?.name, pokemonId);
     const mainType = useMemo(() => data && getMainPokemonType(data), [data]);
     const navigate = useNavigate();
 
     const navigateTo = () => {
         navigate(`/pokemon/${data?.name}`);
+        closeModal();
     }
 
     return (
-        <div className={`${mainType}-background relative w-56 h-56 rounded-lg shadow-lg p-4 cursor-pointer`}>
+        <div className={`${mainType}-background relative w-56 h-56 rounded-lg shadow-lg p-4 cursor-pointer`} data-testid="pokemon-card">
             <FavoriteButton pokemonId={data?.id ?? 0} />
             <TypeIcons types={data?.types ?? []} />
             <div className="flex flex-col items-center mx-auto" onClick={navigateTo}>
