@@ -33,7 +33,7 @@ export const useGetPokemonList = () => {
         pokemonList: data?.results ?? [],
         isLoading,
         error: error?.message ?? null,
-        goToNextPage: data?.next ? goToNextPage : null,
-        goToPreviousPage: data?.previous ? goToPreviousPage : null
+        goToNextPage: data?.next ? goToNextPage : undefined,
+        goToPreviousPage: data?.previous ? goToPreviousPage : undefined
     }
 }

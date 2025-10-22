@@ -28,7 +28,7 @@ export interface IPokemonSprites {
 export interface IPokemonData {
     name: string;
     id: number;
-    heigth: number;
+    height: number;
     weight: number;
     types: IPokemonType[];
     sprites?: IPokemonSprites;
